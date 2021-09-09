@@ -52,10 +52,11 @@ def mosaicBlur(img, classifier):
   return img
 
 classifier = 'haarcascade_frontalface_default.xml'
-img_path = sys.argv[1]
+img_path = sys.argv[2]
 
 #Features
-if sys.argv[2] == '1':
+if sys.argv[1] == '1':
+  if sys.argv[3] == '1':
     img = cv2.imread(img_path)
     output1 = detectImages(img, classifier)
     plt.imshow(cv2.cvtColor(output1, cv2.COLOR_BGR2RGB))
@@ -63,9 +64,9 @@ if sys.argv[2] == '1':
     plt.grid(None) 
     plt.xticks([])
     plt.yticks([])
-    lt.show()
+    plt.show()
 
-elif sys.argv[2] == '2':
+  elif sys.argv[3] == '2':
     img = cv2.imread(img_path)
     output2 = gaussianBlur(img, classifier)
     plt.imshow(cv2.cvtColor(output2, cv2.COLOR_BGR2RGB))
@@ -75,7 +76,7 @@ elif sys.argv[2] == '2':
     plt.yticks([])
     plt.show()
 
-elif sys.argv[2] == '3':
+  elif sys.argv[3] == '3':
     img = cv2.imread(img_path)
     output3 = mosaicBlur(img, classifier)
     plt.imshow(cv2.cvtColor(output3, cv2.COLOR_BGR2RGB))
@@ -85,7 +86,7 @@ elif sys.argv[2] == '3':
     plt.yticks([])
     plt.show()
 
-else:
+  elif sys.argv[3] == '4':
     img = cv2.imread(img_path)
     img1 = img.copy()
     img10 = img.copy()
@@ -105,3 +106,17 @@ else:
         plt.yticks([])
     plt.rcParams["figure.figsize"] = (15,10)
     plt.show()
+
+else:
+  cap = cv2.VideoCapture(0)
+
+  while True:
+    ret, frame = cap.read()
+    blurred_img =  mosaicBlur(frame, 'haarcascade_frontalface_default.xml')
+    
+    cv2.imshow('Webcam', frame)
+    keyboard = cv2.waitKey(30)
+    if keyboard == 'q' or keyboard == 27:
+        break
+  cap.release()
+  cv2.destroyAllWindows()
