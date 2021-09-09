@@ -4,8 +4,9 @@ WORKDIR /app
 
 COPY . /app
 
+RUN apt-get update
+RUN apt-get install python3-tk -y
 RUN pip install -r requirements.txt
-# RUN sudo apt-get install python3-tk
 
 EXPOSE 80
 
