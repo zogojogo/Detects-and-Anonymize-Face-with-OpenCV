@@ -11,9 +11,9 @@ If the image already pulled, then run the anonymize container with this command.
 docker run -it --rm \
            --env="DISPLAY" \
            --env="QT_X11_NO_MITSHM=1" \
-           --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+           --volume="$XSOCK:$XSOCK:rw" \
            --device=/dev/video0:/dev/video0 \ 
-           zogojogo/anonymize_face:latest \
+           zogojogo/anonymize_face:latest 
 ```
 
 If we already in the bash shell and working directory, we can directly run the program. But before that maybe u can check the directory by ```ls``` command. So there are few option to run the program, we can choose whether to use images as the input or use our webcam as the input. The purpose is still the same to anonymize the detected faces. This is the main structure to run the program. 
