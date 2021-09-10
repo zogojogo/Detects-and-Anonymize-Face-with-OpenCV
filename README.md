@@ -1,4 +1,14 @@
-# Installation Guide
+# Detects and Anonymize Face with OpenCV
+## Description
+This program is a face detection program and can anonymize the face. The background of this program is that lately, our faces are increasingly become "unsafe" on the internet, the potential for abuse is very high, especially if our faces are in public photos. Besides that, I also inspired by Google Maps Street View which can give a blur effect to every face detected in Street View.
+
+This program has several features, including:
+- Receive image input and assigns a bounding box to the detected face
+- Receive image input and apply Gaussian Blur effect on detected faces
+- Receive image input and apply Mosaic Blur effect on detected faces
+- Receive real-time video input from webcam and apply Mosaic Blur effect on detected faces
+- Receive video input and anonymize the detected faces per frame (Soon)
+## Installation Guide
 ### Pull the Image
 First, pull the image with this command
 
@@ -50,3 +60,7 @@ To use a webcam as the input we just pass ```2``` in the first argument and then
 Command to run with webcam : 
 
 ```python main.py 2 0 0```
+
+## Output Examples
+### 1 Person with Image Input
+!['Figure 1'](Output Examples/Figure_1.png)
