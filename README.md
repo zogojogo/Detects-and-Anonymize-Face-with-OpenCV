@@ -63,4 +63,4 @@ Command to run with webcam :
 
 ## Output Examples
 ### 1 Person with Image Input
-![Figure1](Output Examples/Figure_1.png)
+![Figure1]('./Output Examples/Figure_1.png')
