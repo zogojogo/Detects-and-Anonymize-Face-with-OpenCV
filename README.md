@@ -1,6 +1,8 @@
 # Detects and Anonymize Face with OpenCV
 ## Description
 This program is a face detection program and can anonymize the face. The background of this program is that lately, our faces are increasingly become "unsafe" on the internet, the potential for abuse is very high, especially if our faces are in public photos. Besides that, I also inspired by Google Maps Street View which can give a blur effect to every face detected in Street View.
+#### Courtesy of Google Maps
+![Figure6](Output/Figure_6.png)
 
 This program has several features, including:
 - Receive image input and assigns a bounding box to the detected face
