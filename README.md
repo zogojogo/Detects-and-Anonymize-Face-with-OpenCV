@@ -8,6 +8,10 @@ This program has several features, including:
 - Receive image input and apply Mosaic Blur effect on detected faces
 - Receive real-time video input from webcam and apply Mosaic Blur effect on detected faces
 - Receive video input and anonymize the detected faces per frame (Soon)
+
+## Diagram Block
+Here's how the program will flow.
+![Diagram](Diagram.png)
 ## Installation Guide
 ### Pull the Image
 First, pull the image with this command
