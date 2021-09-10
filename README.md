@@ -63,10 +63,10 @@ Command to run with webcam :
 
 ## Output Examples
 ### 1 Person with Image Input
-![Figure1](./Output Examples/Figure_1.png)
+![Figure1](./Output/Figure_1.png)
 ### > 1 Person with Image Input
-![Figure2](./Output Examples/Figure_2.png)
-![Figure3](./Output Examples/Figure_3.png)
-![Figure4](./Output Examples/Figure_4.png)
+![Figure2](./Output/Figure_2.png)
+![Figure3](./Output/Figure_3.png)
+![Figure4](./Output/Figure_4.png)
 ### Webcam Test
-![Figure5](./Output Examples/Figure_5.png)
+![Figure5](./Output/Figure_5.png)
