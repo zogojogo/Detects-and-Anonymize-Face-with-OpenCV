@@ -38,7 +38,7 @@ docker run -it --rm \
            --device=/dev/video0:/dev/video0 \ 
            zogojogo/anonymize_face:latest 
 ```
-
+## Run the Program
 If we are already in the bash shell and working directory, we can directly run the program. But before that maybe u can check the directory by the ```ls``` command. So there are a few options to run the program, we can choose whether to use images as the input or use our webcam as the input. The purpose is still the same to anonymize the detected faces. This is the main structure to run the program. 
 
 ``` python main.py <image/webcam mode> <image_path> <image_outputs> ```
